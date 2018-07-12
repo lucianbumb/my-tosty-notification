@@ -1,0 +1,19 @@
+<div class="container">
+
+  <div *ngFor="let notification of notifications">
+    <div  class="notification">
+      <div class="header">
+          <fa-icon [icon]="notification.icon" [ngStyle]="{'color':notification.color}"></fa-icon>
+        <span class="title">{{notification.title}}</span>
+        <span class="close" (click)="removeNotification(notification)">close in {{notification.second}} sec.</span>
+      </div>
+      <div class="message">
+        <p>{{notification.message}}</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- *ngIf="notification.isVisible" -->
